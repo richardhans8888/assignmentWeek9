@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,16 +12,21 @@
     </style>
 </head>
 <body>
-    <input type="text" id="inputField" placeholder="Enter a number">
-    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-3.7.1.min"></script>
+    
+    <input type="text" id="myInput" placeholder="Enter number here.">
+    <button id="myButton">Submit</button>
+    <br><br><br>
+    <a href = "2.html"><button>Assignment 2</button></a>
+
     <script>
-        $('#inputField').blur(function () {
-            const value = $(this).val();
-            if (value > 10) {
-                $(this).addClass('error');
+        $("#myInput").blur(function(){
+            var BoxValue = $("#myInput").val();
+            if (BoxValue > 10){
+                $("#myInput").addClass("error");
             } 
-            else {
-                $(this).removeClass('error');
+            else{
+                $("#myInput").removeClass("error");
             }
         });
     </script>
